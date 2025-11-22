@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Lost in Space | Tasos Tilsi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+      min-height: 100vh;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .container {
+      text-align: center;
+      z-index: 10;
+    }
+    .error-code {
+      font-size: 10rem;
+      font-weight: bold;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: none;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .message {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      opacity: 0.9;
+    }
+    .sub-message {
+      font-size: 1rem;
+      opacity: 0.6;
+      margin-bottom: 40px;
+    }
+    .buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .home-btn, .back-btn {
+      display: inline-block;
+      padding: 15px 40px;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .home-btn {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    }
+    .back-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+    }
+    .home-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+    }
+    .back-btn:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+    /* Stars background */
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .star {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 2s ease-in-out infinite;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+    .astronaut {
+      font-size: 4rem;
+      display: block;
+      margin-bottom: 20px;
+      animation: spin 10s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+
+  <div class="container">
+    <span class="astronaut">🧑‍🚀</span>
+    <div class="error-code">404</div>
+    <p class="message">Houston, we have a problem!</p>
+    <p class="sub-message">The page you're looking for has drifted into deep space.</p>
+    <div class="buttons">
+      <button onclick="history.back()" class="back-btn">← Go Back</button>
+      <a href="/presentations/" class="home-btn" id="home-link">🚀 Return to Base</a>
+    </div>
+  </div>
+
+  <script>
+    // Fix home link for local testing
+    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+      document.getElementById('home-link').href = '/';
+    }
+
+    // Generate random stars
+    const starsContainer = document.getElementById('stars');
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.animationDelay = Math.random() * 2 + 's';
+      star.style.width = Math.random() * 3 + 1 + 'px';
+      star.style.height = star.style.width;
+      starsContainer.appendChild(star);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "presentations",
+  "version": "1.0.0",
+  "description": "Collection of Slidev presentations by Tasos Tilsi",
+  "private": true,
+  "scripts": {
+    "dev:allure": "cd allure-reporting && npm run dev",
+    "build:allure": "cd allure-reporting && npx slidev build --base /presentations/allure-reporting/ --out ../../dist/allure-reporting",
+    "build:all": "npm run build:allure && cp index.html dist/",
+    "install:all": "cd allure-reporting && npm install"
+  },
+  "author": "Anastasios Tilsizoglou",
+  "license": "MIT"
+}

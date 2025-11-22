@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Local env files
+*.local
+
+# Private scripts (keep presentation scripts private)
+**/SCRIPT.md

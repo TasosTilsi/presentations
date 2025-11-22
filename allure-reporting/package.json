@@ -1,0 +1,22 @@
+{
+  "name": "allure-slidev-clean",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@iconify-json/carbon": "^1.2.14",
+    "@iconify-json/fa6-brands": "^1.2.6",
+    "@iconify-json/fa6-solid": "^1.2.4",
+    "@iconify-json/twemoji": "^1.2.4",
+    "@slidev/cli": "^52.9.0",
+    "@slidev/theme-default": "^0.25.0"
+  }
+}

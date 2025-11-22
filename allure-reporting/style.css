@@ -1,0 +1,215 @@
+/* Custom Slidev Styles */
+
+/* Global styling */
+.slidev-layout {
+  @apply text-white;
+  background-color: #121212;
+}
+
+/* Custom background overlays for better text readability - Glassmorphism */
+/* Disabled - was blocking background images
+.slidev-layout::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.25) 100%);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: -1;
+}
+*/
+
+/* Add glassmorphism to main content areas */
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3,
+.slidev-layout p,
+.slidev-layout div {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Enhance code blocks with glassmorphism */
+.slidev-code {
+  @apply rounded-lg shadow-2xl;
+  background: rgba(13, 27, 42, 0.85) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Icon animations on hover */
+.icon-btn {
+  transition: all 0.3s ease;
+}
+
+.icon-btn:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Glowing effect for important text */
+.glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+               0 0 20px rgba(255, 255, 255, 0.3),
+               0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+/* Stronger glow effect for Allure Reporting */
+.text-glow {
+  text-shadow: 0 0 20px rgba(250, 204, 21, 0.8),
+               0 0 40px rgba(250, 204, 21, 0.5),
+               0 0 60px rgba(250, 204, 21, 0.3);
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(250, 204, 21, 0.8),
+                 0 0 40px rgba(250, 204, 21, 0.5),
+                 0 0 60px rgba(250, 204, 21, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(250, 204, 21, 1),
+                 0 0 60px rgba(250, 204, 21, 0.7),
+                 0 0 90px rgba(250, 204, 21, 0.5);
+  }
+}
+
+/* Animated gradient for headers */
+h1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Card hover effects with glassmorphism */
+.bg-blue-500\/20, .bg-green-500\/20, .bg-purple-500\/20,
+.bg-orange-500\/20, .bg-pink-500\/20 {
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bg-blue-500\/20:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+  background: rgba(59, 130, 246, 0.15) !important;
+}
+.bg-green-500\/20:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.4);
+  background: rgba(34, 197, 94, 0.15) !important;
+}
+.bg-purple-500\/20:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
+  background: rgba(168, 85, 247, 0.15) !important;
+}
+.bg-orange-500\/20:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4);
+  background: rgba(249, 115, 22, 0.15) !important;
+}
+.bg-pink-500\/20:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.4);
+  background: rgba(236, 72, 153, 0.15) !important;
+}
+
+/* QR Code placeholder styling */
+.w-40.h-40.bg-white,
+.w-48.h-48.bg-white {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.w-40.h-40.bg-white:hover,
+.w-48.h-48.bg-white:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+}
+
+/* Mermaid diagram styling with glassmorphism */
+.mermaid {
+  background: rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced list items */
+li {
+  transition: all 0.2s ease;
+  padding-left: 0.5rem;
+}
+
+li:hover {
+  transform: translateX(5px);
+  color: #fbbf24;
+}
+
+/* Number emphasis */
+.text-9xl {
+  text-shadow: 0 0 40px rgba(250, 204, 21, 0.5);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    text-shadow: 0 0 40px rgba(250, 204, 21, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 60px rgba(250, 204, 21, 0.8),
+                 0 0 80px rgba(250, 204, 21, 0.4);
+  }
+}
+
+/* Grid layouts */
+.grid {
+  gap: 1.5rem;
+}
+
+/* Backdrop blur for content boxes */
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+}
+
+/* Icon colors */
+.text-red-400 { color: #f87171; }
+.text-orange-400 { color: #fb923c; }
+.text-yellow-400 { color: #facc15; }
+.text-green-400 { color: #4ade80; }
+.text-blue-400 { color: #60a5fa; }
+.text-purple-400 { color: #c084fc; }
+.text-pink-400 { color: #f472b6; }
+.text-cyan-400 { color: #22d3ee; }
+
+/* Font Awesome icon sizing */
+fa6-solid-rocket,
+fa6-solid-fire,
+fa6-solid-heart,
+fa6-solid-code {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: color, background-color, border-color, transform, box-shadow;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
