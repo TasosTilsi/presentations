@@ -34,7 +34,7 @@ jobs:
 
       - name: Build allure-reporting
         working-directory: allure-reporting
-        run: npx slidev build --base /presentations/allure-reporting/ --out ../dist/presentations/allure-reporting
+        run: npx slidev build --base /presentations/allure-reporting/ --out ../dist/allure-reporting
 
       # Add more presentations here as needed:
       # - name: Install dependencies (another-talk)
