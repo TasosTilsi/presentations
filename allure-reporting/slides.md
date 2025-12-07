@@ -35,12 +35,36 @@ fonts:
   </a>
 </div>
 
+<!--
+For those of you who don't know me, my name is **Anastasios Tilsizoglou**, aka **Tasos Tilsi**. I have been working in the capacity of Senior Software Engineer for **7 years of experience** in the role.
+
+*(pause, smile)*
+
+7 years in test automation... That's 7 years of hearing "it works on my machine" — approximately 47,000 times. And 7 years of developers looking at me like I personally offended their entire family tree when I find a bug. And let's not forget the classics: "works as designed" — which is just developer way of saying for "I don't want to fix it." And "not reproducible" — which essentially means "I tried once and gave up."
+
+*(pause)*
+
+But to be fair — I've been on the other side too. I've been the developer saying "it's not a bug, it's a feature." So now, as an SET, when a developer tells me "I made a small change, no need to test" — I know that's EXACTLY when I need to test everything. At least Twice if not more. Because I've *been* that developer.
+
+*(wait for laughs)*
+
+So, enough about my *colorful* career, and without further ado, let's move on with my presentation which revolves around **"Boosting Your Team's Clarity in Test Automation with Allure Reporting."**
+
+However, before we delve into the presentation, let's discuss and not ignore...
+-->
+
 ---
 layout: center
 class: text-center
 ---
 
 <img src="/elephant.jpg" alt="Elephant in the room" class="w-120 h-80 object-contain rounded-xl shadow-2xl" />
+
+<!--
+...the **elephant in the room**.
+
+**[Pause for effect, let the image sink in]**
+-->
 
 ---
 layout: center
@@ -58,6 +82,24 @@ What is the biggest challenge your team faces<br/>with test result visibility?
 </div>
 
 <p class="mt-6 text-sm opacity-70">Scan to share your answer</p>
+
+<!--
+At this point, please take out your phones and scan the QR code. Whatever you type in will shortly appear on the screen.
+
+**[Wait 20-30 seconds for responses]**
+
+The question is: **"What is the biggest challenge your team faces with test result visibility?"**
+
+**If signal issues:**
+If the signal is not letting you through and the pages are not loading, we'll go with a show of hands instead.
+
+**After collecting responses:**
+*(Read out some interesting responses)*
+
+These are all very real challenges. And here's the thing — many of these can actually be addressed with the right reporting tool. That's exactly what we're going to explore today.
+
+But first, let me get a sense of where everyone is at...
+-->
 
 ---
 layout: center
@@ -82,6 +124,30 @@ What is your experience level with Allure Reporting?
 </div>
 
 <p class="mt-6 text-sm opacity-70">Scan to share your experience</p>
+
+<!--
+Before I share my story, I'd like to get a quick grasp at your experience level with no other than... Allure Reporting.
+
+Please scan the QR code again and let me know:
+- Have you **never heard of it**?
+- **Heard of it** but never used it?
+- **Tried it** a bit?
+- Or do you **use it regularly**?
+
+**[Wait for responses]**
+
+**OPTION A: Mostly "Never heard of it" / "Heard but never used"**
+Perfect! So most of you are new to Allure. That's exactly why I'm here today. I was in the same position a few years ago, and I want to share how discovering Allure transformed our testing workflow. Let me tell you a story...
+
+**OPTION B: Mixed responses (some beginners, some experienced)**
+Great, we have a nice mix! For those who haven't used Allure yet — you're in for a treat. And for those who already use it — maybe you'll pick up a few new tricks or validate some of your practices. Let me take you through my journey...
+
+**OPTION C: Mostly "Tried it" / "Use it regularly"**
+Excellent! Many of you already have hands-on experience. That's fantastic. I'll still share my story because context matters, and we might have some advanced tips that even experienced users find valuable. Plus, I'd love to hear your experiences in the Q&A. So, let me tell you how I got started...
+
+**OPTION D: Completely split / Unclear**
+Interesting distribution! Whether you're new to Allure or a seasoned user, there's something here for everyone. The story I'm about to tell you will resonate regardless of your experience level...
+-->
 
 ---
 layout: two-cols
@@ -108,6 +174,31 @@ layout: two-cols
   <img src="/qr-mentimeter.png" alt="Mentimeter QR Code" class="w-48 h-48 rounded-lg border-4 border-blue-400 shadow-lg hover:scale-105 transition-transform" />
 </div>
 
+<!--
+Now, one more quick poll. **Which reporting tools are you currently using?**
+
+- Console logs?
+- Default framework reports?
+- Extended reports?
+- ReportPortal?
+- Already using Allure?
+- Something else?
+
+**[Wait for responses]**
+
+**If mostly Console Logs / Default Reports:**
+I see many of you are using console logs and default reports. I've been there. And let me tell you believe it or not — there's a better way. My story starts exactly where you are now...
+
+**If mostly Extended Reports / ReportPortal:**
+Many of you already have reporting solutions in place. That's good! But let me show you why we moved away from similar tools and what makes Allure stand out...
+
+**If mixed:**
+Variety of tools! That's typical in our industry. The challenge is finding something that works across different frameworks and teams. That's exactly the problem I faced...
+
+**[Transition phrase]**
+So let me take you back to when this all started...
+-->
+
 ---
 layout: center
 ---
@@ -124,6 +215,14 @@ layout: center
 
 </div>
 
+<!--
+**Once upon a time...** *(smile)*
+
+When I joined my current company, I was hired specifically to **handle the api test automation from scratch**. There was nothing in place — no existing code, no testing framework, nothing. And when I say nothing I mean nothing.
+
+The team had already done some exploration and built an initial archetype based on **Playwright with TypeScript**. They had done POCs that showed it was a good fit for our products.
+-->
+
 ---
 layout: center
 ---
@@ -139,6 +238,24 @@ layout: center
 <p><fa6-solid-question class="text-purple-400"/> Why? Because that's where my experience was</p>
 
 </div>
+
+<div class="text-3xl font-bold text-red-400 mt-10">
+<fa6-solid-triangle-exclamation/> Spoiler Alert: Wrong decision
+</div>
+
+<!--
+**Every day**, we were building and expanding our test coverage. And because of my background — I had more experience with API testing in Java — and because there was an immediate need for API tests, I made a decision.
+
+I built a **second framework**. A separate one. Based on **Java with REST Assured**.
+
+Two frameworks. Two languages. Two entirely different worlds.
+
+Why? Because that's where my expertise was.
+
+*(Pause, then point to the spoiler alert)*
+
+**Spoiler alert:** It was the wrong decision.
+-->
 
 ---
 layout: center
@@ -161,9 +278,21 @@ class: text-center
 
 </div>
 
-<div class="text-3xl font-bold text-red-400 mt-10">
-<fa6-solid-triangle-exclamation/> Spoiler Alert: Wrong decision
-</div>
+<!--
+**Until one day...** about a year later... we realized something.
+
+*(Pause, point at the big number)*
+
+**1,200+ tests.**
+
+That's how many tests we had to migrate. From Java REST Assured back to Playwright TypeScript.
+
+From the very beginning — we should have built on the existing archetype from the start. We should have extended Playwright's capabilities for API testing instead of creating a separate framework.
+
+But here's the thing — that wasn't even our biggest problem...
+
+We had bigger fish to fry!
+-->
 
 ---
 layout: center
@@ -189,6 +318,23 @@ layout: center
 <fa6-solid-eye-slash/> Teams, managers, stakeholders — all blind
 </div>
 
+<!--
+**The REAL problem** wasn't about frameworks or languages.
+
+It was about **visibility**.
+
+*(Go through each point)*
+
+- We had **ReportNG** for Java, and **default Playwright reports** for the other framework
+- **Neither** provided good support for investigating failures — just basic information
+- **Neither** was readable for managers — try sending those reports to stakeholders
+- And here's the kicker: we wanted to **automatically update Jira** with test results
+
+But with two frameworks in two languages, we'd have to build and maintain that integration **twice**.
+
+Teams, managers, stakeholders — **everyone was in the dark**.
+-->
+
 ---
 layout: center
 ---
@@ -212,6 +358,19 @@ layout: center
 <div class="absolute bottom-10 right-10 text-6xl opacity-20">
 <fa6-solid-compass/>
 </div>
+
+<!--
+**Because of that**, we started searching for a solution.
+
+We needed something that:
+- Works with **both Java AND TypeScript/Playwright**
+- Makes it **easy to investigate** test failures
+- Is **visual and stakeholder-friendly**
+- Provides **standardized output** we could use for automation
+- Is **open-source** and well-supported
+
+And after some research, we eventually found it...
+-->
 
 ---
 layout: two-cols
@@ -245,6 +404,21 @@ layout: two-cols
 <div class="flex items-center justify-center h-full">
   <img src="/allure-logo.png" alt="Allure Report Logo" class="w-64 h-64 opacity-80" />
 </div>
+
+<!--
+**Allure Report.**
+
+A flexible, lightweight test report tool that checked every single box.
+
+*(Go through features)*
+
+- **Framework-agnostic** — works with Playwright, Java, Jest, Cypress, you name it
+- **Beautiful, interactive HTML** — managers actually enjoy looking at these reports
+- **Rich test execution details** — everything you need to debug
+- **Step-by-step breakdown** — see exactly what happened and where
+- **Attachments support** — screenshots, logs, videos
+- **Historical trends** — track quality over time
+-->
 
 ---
 layout: center
@@ -286,6 +460,20 @@ flowchart LR
 </div>
 </div>
 
+<!--
+The beauty of Allure is its **simplicity**.
+
+*(Walk through the diagram)*
+
+1. You **run your tests** as normal
+2. Allure generates **JSON result files**
+3. You run `allure generate`
+4. Out comes a **beautiful HTML report**
+5. **Share it** with your team
+
+That's it. No complex setup, no black magic.
+-->
+
 ---
 layout: center
 ---
@@ -314,6 +502,24 @@ layout: center
 
 </div>
 </div>
+
+<!--
+What I love about Allure is that it serves **two audiences** equally well.
+
+**For Engineers:**
+- Detailed step execution
+- Screenshot attachments
+- Log file integration
+- Video recordings
+- Network traffic capture
+
+**For Managers:**
+- Visual dashboards they actually understand
+- Pass/fail trends over time
+- Flaky test detection
+- Duration analytics
+- Historical comparison
+-->
 
 ---
 
@@ -351,6 +557,23 @@ layout: center
 
 </div>
 
+<!--
+Don't just take my word for it. Let me show you a **real Allure report**.
+
+*(If time permits, click the link and do a quick walkthrough)*
+
+You can see:
+- The overview dashboard
+- Graphs and trends
+- Test suites breakdown
+- Timeline view
+- Attachments
+- Detailed steps
+
+*(If short on time)*
+The link is there — I encourage you to explore it after the session.
+-->
+
 ---
 layout: two-cols
 ---
@@ -386,6 +609,18 @@ npm install --save-dev \
 </div>
 </div>
 
+<!--
+Setting up Allure is **straightforward**. Let me walk you through it quickly.
+
+**Step 1: Install**
+
+```bash
+npm install --save-dev @playwright/test allure-playwright
+```
+
+Works with Playwright, Jest, Cypress, Selenium, JUnit, TestNG, and more!
+-->
+
 ---
 
 # <fa6-solid-gear/> Setup: Step 2
@@ -412,7 +647,23 @@ export default defineConfig({
 </div>
 </div>
 
----
+<!--
+**Step 2: Configure** your playwright.config.ts to use the allure reporter.
+
+```typescript
+export default defineConfig({
+  reporter: [
+    ['allure-playwright', {
+      outputFolder: 'allure-results'
+    }]
+  ],
+  // ... other config
+});
+```
+
+Results are stored in `allure-results/` and it auto-captures screenshots and logs.
+-->
+
 ---
 
 # <fa6-solid-terminal/> Setup: Step 3
@@ -445,6 +696,25 @@ allure open allure-report
 </div>
 </div>
 
+<!--
+**Step 3: Generate and View**
+
+```bash
+# Run your tests
+npx playwright test
+
+# Generate report
+allure generate allure-results -o allure-report
+
+# Open in browser
+allure open allure-report
+```
+
+Three steps. That's all it takes to get started.
+
+Auto-opens in browser, interactive and searchable, easy to share.
+-->
+
 ---
 layout: center
 class: text-center
@@ -466,6 +736,23 @@ Which annotation is used to add a custom label in an Allure report?
 <div class="flex justify-center mt-8">
   <img src="/qr-mentimeter.png" alt="Mentimeter QR Code" class="w-40 h-40 rounded-lg border-4 border-yellow-400 shadow-lg hover:scale-105 transition-transform" />
 </div>
+
+<!--
+Quick **quiz time**! Let's see if you've been actually paying attention.
+
+**Which annotation is used to add a custom label in an Allure report?**
+
+A) @allure.step
+B) @allure.label
+C) @allure.description
+D) @allure.link
+
+*(Wait for responses)*
+
+The answer is... **B) @allure.label**!
+
+Though honestly, you'll use all of these in a real project.
+-->
 
 ---
 layout: two-cols
@@ -503,6 +790,14 @@ uses: peaceiris/actions-gh-pages@v3
 </div>
 </div>
 
+<!--
+Of course, Allure integrates beautifully with **CI/CD pipelines**.
+
+Here's a simple GitHub Actions example. You can run your tests, generate the report, and publish it to GitHub Pages.
+
+This gives you **historical trends** across builds, **automatic hosting**, and **easy sharing**.
+-->
+
 ---
 layout: center
 ---
@@ -535,10 +830,29 @@ layout: center
 </div>
 
 <div class="text-center mt-10 text-3xl font-bold">
-<fa6-solid-arrow-down class="text-yellow-400"/> <span class="text-green-400">93% faster</span> debugging!
+<fa6-solid-arrow-down class="text-yellow-400"/> <span class="text-green-400">Up to 80% faster</span> debugging!
 </div>
 
----
+<!--
+Let me share the **real impact** we experienced.
+
+**Before Allure:**
+- ~3-10 minutes to identify an issue
+- Dig through console logs
+- Unclear failure reasons
+- Managers completely in the dark
+
+**After Allure:**
+- **2 minutes** to identify an issue
+- Visual screenshots and logs right there
+- Clear step-by-step trace
+- Stakeholder dashboards everyone can read
+
+That's **up to 80% faster** debugging.
+
+But more importantly — everyone on the team finally had **clarity**.
+-->
+
 ---
 
 # <fa6-solid-lightbulb/> Advanced Features
@@ -582,6 +896,17 @@ layout: center
 </div>
 </div>
 
+<!--
+For those who want to go deeper, Allure has **advanced features**:
+
+- **Categorization** — custom labels, feature tagging, severity levels, owner assignment
+- **Flaky test detection** — auto-detection, retry tracking, success rate %, historical patterns
+- **Integrations** — Jira issues, test case links, documentation, bug trackers
+- **Timeline view** — parallel execution, thread visualization, duration breakdown, bottleneck detection
+
+Remember our Jira integration problem? With Allure's standardized output, we built **one microservice** that works for both frameworks.
+-->
+
 ---
 layout: center
 class: text-center
@@ -610,7 +935,19 @@ class: text-center
   <img src="/qr-mentimeter.png" alt="Mentimeter QR Code" class="w-40 h-40 rounded-lg border-4 border-purple-400 shadow-lg hover:scale-105 transition-transform" />
 </div>
 
----
+<!--
+So, **which feature do you find most useful?**
+
+- Step-by-step execution?
+- Attachments (screenshots/logs)?
+- Flaky test detection?
+- CI/CD integration?
+- Visual dashboards?
+- History and Trends Analysis?
+
+*(Collect responses and comment on popular choices)*
+-->
+
 ---
 
 # <fa6-solid-trophy/> Why Choose Allure
@@ -619,7 +956,7 @@ class: text-center
 <div class="bg-blue-500/20 p-5 rounded-lg border-l-4 border-blue-400">
 
 ### <fa6-solid-code class="text-blue-400"/> For Engineers
-- Faster debugging (30min → 2min)
+- Faster debugging (up to 80% faster)
 - Step-by-step execution
 - Easy to add custom info
 
@@ -650,6 +987,15 @@ class: text-center
 </div>
 </div>
 
+<!--
+To summarize — **why choose Allure?**
+
+- **For Engineers:** Faster debugging (up to 80% faster), step-by-step execution, easy to add custom info
+- **For Teams:** Framework-agnostic, historical trends, flaky test tracking
+- **For Managers:** Clear visual reports, understandable metrics, CI/CD integration
+- **For Everyone:** Open-source and free, active community, extensible and customizable
+-->
+
 ---
 layout: center
 class: text-center
@@ -671,6 +1017,23 @@ Which command is used to open the Allure HTML report?
 <div class="flex justify-center mt-8">
   <img src="/qr-mentimeter.png" alt="Mentimeter QR Code" class="w-40 h-40 rounded-lg border-4 border-yellow-400 shadow-lg hover:scale-105 transition-transform" />
 </div>
+
+<!--
+One last quiz!
+
+**Which command is used to open the Allure HTML report?**
+
+A) allure serve
+B) npx playwright test
+C) allure open
+D) npm run report
+
+*(Wait for responses)*
+
+The answer is **C) allure open**!
+
+Though `allure serve` is also useful — it generates AND opens in one command.
+-->
 
 ---
 layout: center
@@ -694,6 +1057,24 @@ Do you plan to implement Allure in your project?
 <div class="flex justify-center mt-8">
   <img src="/qr-mentimeter.png" alt="Mentimeter QR Code" class="w-40 h-40 rounded-lg border-4 border-green-400 shadow-lg hover:scale-105 transition-transform" />
 </div>
+
+<!--
+**One more thing...** I'm curious.
+
+Do you think we can address the elephant in the room, now that you got an idea of allure reporting?
+
+Do you plan to implement Allure in your project?
+
+- Yes, immediately!
+- Yes, but need to plan
+- Maybe, need more info
+- No, not right now
+- Already using it!
+
+*(Comment on responses)*
+
+For those saying "need more info" — please catch me after the session. I'm happy to discuss your specific use case.
+-->
 
 ---
 layout: center
@@ -719,4 +1100,20 @@ class: text-center
 <fa6-solid-rocket class="text-green-400"/>
 </div>
 
+<!--
+And that brings us to the end.
+
+**Thank you** for your time and attention!
+
+If you want to connect:
+- **GitHub:** github.com/tasostilsi
+- **Website:** tasostilsi.github.io
+
+I'm also happy to answer any questions you have — whether it's about Allure, test automation in general, or that migration story.
+
+And on this note, I leave you with one key takeaway to remember:
+Let's connect and **build better test automation** and all this entails, starting today!
+
+*(Open for Q&A)*
+-->
 
